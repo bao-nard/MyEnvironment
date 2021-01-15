@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     container: {
         display: "flex",
         flexDirection: "column",
-        // backgroundColor: '#FFC0CB',
+        // backgroundColor: '#FFd1d0',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -88,12 +88,11 @@ const styles = StyleSheet.create({
     },
 
     inputView: {
-        backgroundColor: "#ebe134",
+        backgroundColor: "#ffaa",
         borderRadius: 30,
         width: "70%",
         height: 45,
         marginBottom: 20,
-        alignItems: "center",
         justifyContent: 'center',
     },
 
@@ -106,21 +105,20 @@ const styles = StyleSheet.create({
 
     forgot_button: {
         height: 20,
-
     },
 
     loginBtn: {
+        fontWeight: 'bold',
         width: "35%",
         borderRadius: 25,
         height: 40,
         alignItems: "center",
         justifyContent: "center",
         marginTop: 20,
-        backgroundColor: "#FF1493",
+        backgroundColor: "#ffaaaa",
     },
     register_button: {
         fontWeight: 'bold',
-        margin: 15,
     }
 });
 

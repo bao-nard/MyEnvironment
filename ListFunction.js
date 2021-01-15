@@ -59,7 +59,7 @@ export default class ListFunction extends React.Component {
                 <View style={styles.header}>
                    
                     <Card style={{ backgroundColor: '#F59cbb' }}>
-                        <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+                        <Card.Cover source={{ uri: 'https://i.stack.imgur.com/V0X9M.png?fbclid=IwAR1fdR_rvINaWgwXPHGllRgWc12wVG3ApBgI6svtvIMphcr3fwKr-b1E-go' }} />
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to = "/Func_1">
@@ -78,7 +78,7 @@ export default class ListFunction extends React.Component {
 
                 <View style={styles.header}>
                     <Card style={{ backgroundColor: '#F59cbb' }}>
-                        <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+                        <Card.Cover source={{ uri: 'https://pacificcross.com.vn/images/easyblog_articles/13/b2ap3_large_Into-the-Haze-Air-Quality-in-Vietnam-and-China-1.png?fbclid=IwAR36zyf9CxakRvjRaNgghYIcUrdmHr6Kb9K1R7YJHkYVDAI-EPUpO7A7jyk' }} />
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to="/Func_2">

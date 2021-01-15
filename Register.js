@@ -21,7 +21,7 @@ export default class Register extends React.Component {
                     secureTextEntry={true}
                     underlineColorAndroid='transparent' />
                 <TextInput style={styles.textInput}
-                    placeholder="Replay Your PassWord"
+                    placeholder="Confirm Your PassWord"
                     secureTextEntry={true}
                     underlineColorAndroid='transparent' />
 
