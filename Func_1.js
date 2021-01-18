@@ -166,7 +166,7 @@ export default class TheFirstAlgorithm extends React.Component{
                     <Option value={18}>Quận Thủ Đức</Option>
                 </Select>
 
-                <Text style={styles.states}>District: {this.state.name}</Text>
+                <Text style={styles.states}>District: {this.statew.name}</Text>
                 <Text style={styles.states}>Degree: { this.state.degree }</Text>
                 <Text style={styles.states}>Air quality: {this.state.airQuality}</Text>
                 <Text style={styles.states}>Advice: {this.state.advice}</Text>

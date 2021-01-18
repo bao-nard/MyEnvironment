@@ -63,13 +63,13 @@ export default class ListFunction extends React.Component {
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to = "/Func_1">
-                                    <Button style={{ backgroundColor: '#FFF' }}>Ok</Button>
+                                    <Button style={styles.button_ok}>Ok</Button>
                                 </Link>
                             </TouchableOpacity>
 
                             <TouchableOpacity>
                                 <Link to ="/">
-                                    <Button style={{ backgroundColor: '#FFF' }}>Cancel</Button>
+                                    <Button style={styles.button_cancel}>Cancel</Button>
                                 </Link>
                             </TouchableOpacity>
                         </Card.Actions>
@@ -82,13 +82,13 @@ export default class ListFunction extends React.Component {
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to="/Func_2">
-                                    <Button style={{ backgroundColor: '#FFF' }}>Ok</Button>
+                                    <Button style={styles.button_ok}>Ok</Button>
                                 </Link>
                             </TouchableOpacity>
 
                             <TouchableOpacity>
                                 <Link to="/">
-                                    <Button style={{ backgroundColor: '#FFF' }}>Cancel</Button>
+                                    <Button style={styles.button_cancel}>Cancel</Button>
                                 </Link>
                             </TouchableOpacity>
                         </Card.Actions>
@@ -114,6 +114,15 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingLeft: 10,
         paddingRight: 10,
+    },
+    button_cancel: {
+        backgroundColor: 'red',
+        margin: 2,
+    },
+    button_ok: {
+        backgroundColor: '#FFF',
+        margin: 2,
+        padding: -5,
     }
 })
 

@@ -1,8 +1,10 @@
 import React from 'react'
 import { FlatList } from 'react-native';
-import { Platform,StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import { Platform,StyleSheet, View, Text, TouchableOpacity, SafeAreaView, ScrollView  } from 'react-native';
 import { Link } from "react-router-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Constants from 'expo-constants';
+
 
 export default class TheSecondAlgorithm extends React.Component{
     constructor(props){
@@ -29,13 +31,13 @@ export default class TheSecondAlgorithm extends React.Component{
                 },
                 {
                     name: 'Quận 4',
-                    degree: 26.7,
+                    degree: 26.5,
                     airQuality: 121,
                     advice:'Unhealthy for sensitive group',
                 },
                 {
                     name: 'Quận 5',
-                    degree: 26.7,
+                    degree: 26.1,
                     airQuality: 150,
                     advice: 'Unhealthy for sensitive group',
                 },
@@ -72,7 +74,7 @@ export default class TheSecondAlgorithm extends React.Component{
                 {
                     name: 'Quận 11',
                     degree: 26.2,
-                    airQuality: 150,
+                    airQuality: 151,
                     advice: 'Unhealthy for sensitive group',
                 },
                 {
@@ -107,13 +109,13 @@ export default class TheSecondAlgorithm extends React.Component{
                 },
                 {
                     name: 'Huyện Hóc Môn',
-                    degree: 27.3,
+                    degree: 27.4,
                     airQuality: 114,
                     advice: 'Unhealthy for sensitive group',
                 },
                 {
                     name: 'Quận Thủ Đức',
-                    degree: 26.7,
+                    degree: 26.8,
                     airQuality: 142,
                     advice: 'Unhealthy for sensitive group',
                 },
@@ -149,42 +151,40 @@ export default class TheSecondAlgorithm extends React.Component{
     render(){
 
         return(
-            <View>
-                <TouchableOpacity onPress = {this.sortAscendingDegree}>
-                    <Text style={styles.sort}>Sort Degree In HCM CiTy</Text>
-                    {
-                        this.state.District_Degree.map(x => (
-                            <Text>{x.name}</Text>
-                        ))
-                    }
-                </TouchableOpacity>
+            <SafeAreaView style={styles.container}>
+                <ScrollView style={styles.scrollView}> 
                 
-                
-                
+                     <TouchableOpacity onPress = {this.sortAscendingAirQuality}>
+                        <Text style={styles.sort}>District Ranking by Air Quality</Text>
+                        {
+                            this.state.District_AirQuality.map(index => (
+                                <Text style={styles.text}>{index.name}</Text>
+                            ))
+                        }
+                    </TouchableOpacity>
 
-                <TouchableOpacity onPress = {this.sortAscendingAirQuality}>
-                    <Text style={styles.sort}>Sort Air Quality In HCM City</Text>
-                    {this.state.District_AirQuality.map(index => (<Text>{index.name}</Text>))}
-                </TouchableOpacity>
-
-
+                    <TouchableOpacity onPress = {this.sortAscendingDegree}>
+                        <Text style={styles.sort}>District Ranking by Temperature</Text>
+                        {
+                            this.state.District_Degree.map(x => (
+                                <Text style={styles.text}>{x.name}</Text>
+                            ))
+                        }
+                    </TouchableOpacity>
               
-                <TouchableOpacity>
-                    <Link to="/ListFunction">
-                        <Icon name="angle-double-left" size={40} color="#bf1213" backgroundColor="#F59cbb" style={styles.icon} />
-                    </Link>
-                </TouchableOpacity>
-               
-            </View>
+                    <TouchableOpacity>
+                        <Link to="/ListFunction">
+                            <Icon name="angle-double-left" size={40} color="#bf1213" backgroundColor="#F59cbb" marginTop={20}/>
+                        </Link>
+                    </TouchableOpacity>
+                </ScrollView> 
+            </SafeAreaView>
         )
     }
 }
 
 
 const styles = StyleSheet.create({
-    container:{
-        backgroundColor: '#F59cbb',
-    },
     header:{
         alignSelf: 'stretch',
         backgroundColor: '#FFC0CB',
@@ -197,8 +197,24 @@ const styles = StyleSheet.create({
     sort: {
         padding: 5,
         marginBottom: 15,
+        marginTop: 15,
         fontSize: 20,
         backgroundColor: '#F59cbb',
 
+    },
+    container: {
+        flex: 1,
+        backgroundColor: '#F59cbb',
+    },
+
+    scrollView: {
+        backgroundColor: 'pink',
+        marginHorizontal: 20,
+    },
+
+    text: {
+        padding: 2,
+        fontSize: 18,
+        
     }
 })
