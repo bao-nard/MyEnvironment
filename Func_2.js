@@ -10,20 +10,114 @@ export default class TheSecondAlgorithm extends React.Component{
         this.state={
             District: [
                 {
-                    name: "Quận 1",
-                    degree: 29,
-                    airQuality: 120,
+                    name: 'Quận 1',
+                    degree: 25,
+                    airQuality: 100,
+                    advice:' Moderate',
                 },
                 {
-                    name: "Quận 2",
-                    degree: 27,
-                    airQuality: 129,
+                    name: 'Quận 2',
+                    degree: 24.5,
+                    airQuality: 93,
+                    advice: ' Moderate',
                 },
                 {
-                    name: "Quận 3",
-                    degree: 27.6,
-                    airQuality: 128,
-                }
+                    name: 'Quận 3',
+                    degree: 24.7,
+                    airQuality: 150,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận 4',
+                    degree: 26.7,
+                    airQuality: 121,
+                    advice:'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận 5',
+                    degree: 26.7,
+                    airQuality: 150,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận 6',
+                    degree: 25.5,
+                    airQuality: 145,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận 7',
+                    degree: 27.0,
+                    airQuality: 82,
+                    advice: 'Moderate',
+                },
+                {
+                    name: 'Quận 8',
+                    degree: 26.7,
+                    airQuality: 143,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận 9',
+                    degree: 27.3,
+                    airQuality: 162,
+                    advice: 'Unhealthy',
+                },
+                {
+                    name: 'Quận 10',
+                    degree: 25.7,
+                    airQuality: 69,
+                    advice: 'Moderate',
+                },
+                {
+                    name: 'Quận 11',
+                    degree: 26.2,
+                    airQuality: 150,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận 12',
+                    degree: 27.1,
+                    airQuality: 119,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận Tân Bình',
+                    degree: 27.9,
+                    airQuality: 168,
+                    advice: 'Unhealthy',
+                },
+                {
+                    name: 'Quận Bình Tân',
+                    degree: 27.2,
+                    airQuality: 127,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Huyện Nhà Bè',
+                    degree: 25.9,
+                    airQuality: 113,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Huyện Bình Chánh',
+                    degree: 29.3,
+                    airQuality: 462,
+                    advice: 'Hazardous',
+                },
+                {
+                    name: 'Huyện Hóc Môn',
+                    degree: 27.3,
+                    airQuality: 114,
+                    advice: 'Unhealthy for sensitive group',
+                },
+                {
+                    name: 'Quận Thủ Đức',
+                    degree: 26.7,
+                    airQuality: 142,
+                    advice: 'Unhealthy for sensitive group',
+                },
+    
             ],
             District_Degree:[],
             District_AirQuality:[],
@@ -57,7 +151,7 @@ export default class TheSecondAlgorithm extends React.Component{
         return(
             <View>
                 <TouchableOpacity onPress = {this.sortAscendingDegree}>
-                    <Text>Sort Degree In HCM CiTy</Text>
+                    <Text style={styles.sort}>Sort Degree In HCM CiTy</Text>
                     {
                         this.state.District_Degree.map(x => (
                             <Text>{x.name}</Text>
@@ -66,9 +160,10 @@ export default class TheSecondAlgorithm extends React.Component{
                 </TouchableOpacity>
                 
                 
+                
 
                 <TouchableOpacity onPress = {this.sortAscendingAirQuality}>
-                    <Text>Sort Air Quality In HCM City</Text>
+                    <Text style={styles.sort}>Sort Air Quality In HCM City</Text>
                     {this.state.District_AirQuality.map(index => (<Text>{index.name}</Text>))}
                 </TouchableOpacity>
 
@@ -76,7 +171,7 @@ export default class TheSecondAlgorithm extends React.Component{
               
                 <TouchableOpacity>
                     <Link to="/ListFunction">
-                        <Icon name="angle-double-left" size={40} color="#bf1213" />
+                        <Icon name="angle-double-left" size={40} color="#bf1213" backgroundColor="#F59cbb" style={styles.icon} />
                     </Link>
                 </TouchableOpacity>
                
@@ -98,5 +193,12 @@ const styles = StyleSheet.create({
         paddingLeft: 60,
         paddingRight: 60,
         marginTop: 30,
+    },
+    sort: {
+        padding: 5,
+        marginBottom: 15,
+        fontSize: 20,
+        backgroundColor: '#F59cbb',
+
     }
 })

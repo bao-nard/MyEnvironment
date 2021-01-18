@@ -63,13 +63,13 @@ export default class ListFunction extends React.Component {
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to = "/Func_1">
-                                    <Button style={{ color: '#FFF' }}>Ok</Button>
+                                    <Button style={{ backgroundColor: '#FFF' }}>Ok</Button>
                                 </Link>
                             </TouchableOpacity>
 
                             <TouchableOpacity>
                                 <Link to ="/">
-                                    <Button style={{ color: '#FFF' }}>Cancel</Button>
+                                    <Button style={{ backgroundColor: '#FFF' }}>Cancel</Button>
                                 </Link>
                             </TouchableOpacity>
                         </Card.Actions>
@@ -82,13 +82,13 @@ export default class ListFunction extends React.Component {
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to="/Func_2">
-                                    <Button style={{ color: '#FFF' }}>Ok</Button>
+                                    <Button style={{ backgroundColor: '#FFF' }}>Ok</Button>
                                 </Link>
                             </TouchableOpacity>
 
                             <TouchableOpacity>
                                 <Link to="/">
-                                    <Button style={{ color: '#FFF' }}>Cancel</Button>
+                                    <Button style={{ backgroundColor: '#FFF' }}>Cancel</Button>
                                 </Link>
                             </TouchableOpacity>
                         </Card.Actions>
