@@ -63,13 +63,17 @@ export default class ListFunction extends React.Component {
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to = "/Func_1">
-                                    <Button style={styles.button_ok}>Ok</Button>
+                                    <Button style={styles.button_ok}>
+                                        <Text style={color = 'black'}>Ok</Text>
+                                    </Button>
                                 </Link>
                             </TouchableOpacity>
 
                             <TouchableOpacity>
                                 <Link to ="/">
-                                    <Button style={styles.button_cancel}>Cancel</Button>
+                                    <Button style={styles.button_cancel}>
+                                        <Text style={color = '#fff'}>Cancel</Text>
+                                    </Button>                                
                                 </Link>
                             </TouchableOpacity>
                         </Card.Actions>
@@ -82,13 +86,17 @@ export default class ListFunction extends React.Component {
                         <Card.Actions style={{ paddingLeft: '55%' }}>
                             <TouchableOpacity>
                                 <Link to="/Func_2">
-                                    <Button style={styles.button_ok}>Ok</Button>
-                                </Link>
+                                    <Button style={styles.button_ok}>
+                                        <Text style={color = 'black'}>Ok</Text>
+                                    </Button>                               
+                                 </Link>
                             </TouchableOpacity>
 
                             <TouchableOpacity>
                                 <Link to="/">
-                                    <Button style={styles.button_cancel}>Cancel</Button>
+                                   <Button style={styles.button_cancel}>
+                                        <Text style={color = 'white'}>Cancel</Text>
+                                    </Button>  
                                 </Link>
                             </TouchableOpacity>
                         </Card.Actions>
@@ -117,6 +125,7 @@ const styles = StyleSheet.create({
     },
     button_cancel: {
         backgroundColor: 'red',
+        color: '#fff',
         margin: 2,
     },
     button_ok: {

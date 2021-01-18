@@ -12,7 +12,7 @@ export default class TheFirstAlgorithm extends React.Component{
             degree:0,
             name:"...",
             airQuality:0,
-            advice:"...",
+            level:"...",
         }
     }
     setDate = () => {
@@ -27,114 +27,114 @@ export default class TheFirstAlgorithm extends React.Component{
                 name: 'Quận 1',
                 value: 25,
                 airQuality: 100,
-                advice:' Moderate',
+                level:' Moderate',
             },
             2: {
                 name: 'Quận 2',
                 value: 24.5,
                 airQuality: 93,
-                advice: ' Moderate',
+                level: ' Moderate',
             },
             3: {
                 name: 'Quận 3',
                 value: 24.7,
                 airQuality: 150,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             4: {
                 name: 'Quận 4',
                 value: 26.7,
                 airQuality: 121,
-                advice:'Unhealthy for sensitive group',
+                level:' Unhealthy for sensitive group',
             },
             5: {
                 name: 'Quận 5',
                 value: 26.7,
                 airQuality: 150,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             6: {
                 name: 'Quận 6',
                 value: 25.5,
                 airQuality: 145,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             7: {
                 name: 'Quận 7',
                 value: 27.0,
                 airQuality: 82,
-                advice: 'Moderate',
+                level: ' Moderate',
             },
             8: {
                 name: 'Quận 8',
                 value: 26.7,
                 airQuality: 143,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             9: {
                 name: 'Quận 9',
                 value: 27.3,
                 airQuality: 162,
-                advice: 'Unhealthy',
+                level: ' Unhealthy',
             },
             10: {
                 name: 'Quận 10',
                 value: 25.7,
                 airQuality: 69,
-                advice: 'Moderate',
+                level: ' Moderate',
             },
             11: {
                 name: 'Quận 11',
                 value: 26.7,
                 airQuality: 150,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             12: {
                 name: 'Quận 12',
                 value: 27.1,
                 airQuality: 119,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             13: {
                 name: 'Quận Tân Bình',
                 value: 27.9,
                 airQuality: 168,
-                advice: 'Unhealthy',
+                level: ' Unhealthy',
             },
             14: {
                 name: 'Quận Bình Tân',
                 value: 27.2,
                 airQuality: 127,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             15: {
                 name: 'Huyện Nhà Bè',
                 value: 25.9,
                 airQuality: 113,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             16: {
                 name: 'Huyện Bình Chánh',
                 value: 29.3,
                 airQuality: 462,
-                advice: 'Hazardous',
+                level: ' Hazardous',
             },
             17: {
                 name: 'Huyện Hóc Môn',
                 value: 27.3,
                 airQuality: 114,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
             18: {
                 name: 'Quận Thủ Đức',
                 value: 26.7,
                 airQuality: 142,
-                advice: 'Unhealthy for sensitive group',
+                level: ' Unhealthy for sensitive group',
             },
 
 
         }
-        this.setState({...this.state, degree: District[id].value, name: District[id].name, airQuality: District[id].airQuality, advice: District[id].advice})
+        this.setState({...this.state, degree: District[id].value, name: District[id].name, airQuality: District[id].airQuality, level: District[id].level})
     }
 
     
@@ -166,10 +166,10 @@ export default class TheFirstAlgorithm extends React.Component{
                     <Option value={18}>Quận Thủ Đức</Option>
                 </Select>
 
-                <Text style={styles.states}>District: {this.statew.name}</Text>
+                <Text style={styles.states}>District: {this.state.name}</Text>
                 <Text style={styles.states}>Degree: { this.state.degree }</Text>
                 <Text style={styles.states}>Air quality: {this.state.airQuality}</Text>
-                <Text style={styles.states}>Advice: {this.state.advice}</Text>
+                <Text style={styles.states}>Level: {this.state.level}</Text>
 
                 <TouchableOpacity>
                     <Link to="/ListFunction">
@@ -185,15 +185,16 @@ const styles = StyleSheet.create({
     container:{
         padding: 10,
         backgroundColor:'#F59cbb',
-        alignItems: 'center'
+        alignItems: 'center',
+        fontSize: 40
     },
     icon: {
         marginTop: 10,
         backgroundColor: null
     },
     states: {
-        padding: 5,
-        fontSize: 20
+        padding: 2,
+        fontSize: 18
     }
 })
 

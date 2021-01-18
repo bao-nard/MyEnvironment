@@ -215,6 +215,5 @@ const styles = StyleSheet.create({
     text: {
         padding: 2,
         fontSize: 18,
-        
     }
 })
